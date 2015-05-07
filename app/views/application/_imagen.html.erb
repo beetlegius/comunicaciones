@@ -1,0 +1,7 @@
+<% atributo = :imagen if atributo.nil? %>
+<% if f.object.try(atributo).present? %>
+  <%= imagen f.object.try(atributo), "160x160", "#c", { class: 'col-md-offset-1 img-thumbnail' } %>
+  <%= f.input "remove_#{atributo}", as: :boolean, label: "Eliminar #{atributo}" %>
+<% else %>
+  <%= f.input atributo, as: :file %>
+<% end %>

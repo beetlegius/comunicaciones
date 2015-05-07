@@ -1,0 +1,13 @@
+<%= div_for mensaje, class: :media do %>
+  <%= imagen mensaje.usuario.empresa.imagen, '45x45', '#c', { class: 'pull-left media-object' } %>
+  <div class="media-body">
+    <div class="media-heading">
+      <strong>
+        <%= mensaje.usuario.nombre %> -
+        <span style="color: <%= mensaje.usuario.empresa.color %>;"><%= mensaje.usuario.empresa.try(:to_label) %></span>
+      </strong>
+      <%= content_tag :strong, fecha(mensaje.created_at, format: :fecha), class: 'pull-right fecha' %>
+    </div>
+    <%= textilize(mensaje.contenido.to_s).html_safe %>
+  </div>
+<% end %>

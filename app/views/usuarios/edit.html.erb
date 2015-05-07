@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h3>Cambiar mi información</h3>
+</div>
+
+<%= simple_form_for @usuario do |f| %>
+  <fieldset>
+    <legend>Credenciales de acceso</legend>
+    <%= f.input :nombre %>
+    <%= f.input :email %>
+    <%= f.input :recibe_notificaciones %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+  </fieldset>
+
+  <%= submit_button f %>
+<% end %>

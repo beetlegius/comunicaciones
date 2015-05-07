@@ -1,0 +1,6 @@
+<div class="empresas alert-info">
+  <span class="text-muted pull-left">Empresas</span>
+  <% for empresa in comunicacion.empresas %>
+    <%= imagen empresa.imagen, '40x40', '#c', { title: empresa.nombre, class: 'pull-left' } %>
+  <% end %>
+</div>

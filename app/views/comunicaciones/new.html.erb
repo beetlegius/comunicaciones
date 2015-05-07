@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h3>Nueva comunicación</h3>
+</div>
+
+<%= simple_form_for @comunicacion do |f| %>
+  <%= f.input :asunto, autofocus: true %>
+  <%= f.association :empresas, as: :check_boxes, collection: current_organizacion.empresas.sin(current_empresa), label_method: proc { |empresa| input_empresa(empresa) } %>
+
+  <fieldset>
+    <legend>Primer mensaje</legend>
+    <%= f.simple_fields_for :mensajes_attributes, f.object.mensajes.build, index: nil do |builder| %>
+      <%= builder.input :contenido, label: false %>
+      <%= render 'imagen', f: f, atributo: :archivo %>
+    <% end %>
+  </fieldset>
+
+  <%= submit_button f %>
+<% end %>

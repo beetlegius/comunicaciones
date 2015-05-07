@@ -1,0 +1,9 @@
+<%= tr_for empresa do %>
+  <td><%= content_tag :span, empresa.nombre, style: "color: #{empresa.color}" %></td>
+  <td><%= empresa.email %></td>
+  <td><%= empresa.usuarios.first.nombre_completo %> (empresa.usuarios.first.email)</td>
+  <td>
+    <%= link_to 'Habilitar', [:habilitar, empresa], method: :patch, class: 'btn btn-sm btn-success', data: { confirm: t(:confirmacion), disable_with: t(:espere) } %>
+    <%= link_to 'Eliminar', empresa, method: :delete, class: 'btn btn-sm btn-danger', data: { confirm: t(:confirmacion), disable_with: t(:espere) } %>
+  </td>
+<% end %>

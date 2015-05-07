@@ -1,0 +1,8 @@
+<%= div_for empresa, class: 'col-lg-4 col-md-4 col-sm-6 col-xs-12' do %>
+  <%= imagen empresa.imagen, '100x100', '#c', { class: 'pull-left img-responsive img-thumbnail' } %>
+  <h4><%= fa_icon :building, text: empresa.nombre %></h4>
+  <p>
+    <%= empresa.email %>
+    <small class="text-muted">empresa registrada el <%= fecha empresa.created_at.to_date %></small>
+  </p>
+<% end %>

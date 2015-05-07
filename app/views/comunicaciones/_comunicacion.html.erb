@@ -1,0 +1,11 @@
+<%= div_for comunicacion do %>
+  <%= render 'comunicaciones/header', comunicacion: comunicacion %>
+  <%= render 'comunicaciones/empresas', comunicacion: comunicacion %>
+  <%= content_tag :div, render(comunicacion.mensajes), class: :mensajes %>
+
+  <%= simple_form_for [comunicacion, Mensaje.new], wrapper: :inline do |f| %>
+    <%= f.input :contenido, label: false %>
+    <%= f.input :archivo, as: :file %>
+    <%= submit_button f, 'Enviar', { class: 'pull-right' }, simple: true %>
+  <% end %>
+<% end %>

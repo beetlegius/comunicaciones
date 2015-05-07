@@ -1,0 +1,25 @@
+es:
+  simple_form:
+    "yes": 'Sí'
+    "no": 'No'
+    required:
+      text: 'obligatorios'
+      mark: '*'
+    error_notification:
+      default_message: "Se encontraron algunos errores:"
+    placeholders:
+      defaults:
+        nombre: "Nombre"
+        email: "Correo electrónico"
+      usuario:
+        nombre: "Nombre y apellido"
+        password: "Contraseña"
+        password_confirmation: "Confirmación de contraseña"
+      usuarios:
+        nombre: "Nombre y apellido"
+        password: "Contraseña"
+        password_confirmation: "Confirmación de contraseña"
+      mensaje:
+        contenido: "Escriba el mensaje..."
+      mensajes:
+        contenido: "Escriba el mensaje..."

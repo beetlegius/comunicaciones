@@ -1,0 +1,10 @@
+<%= div_for comunicacion do %>
+  <%= render 'comunicaciones/header', comunicacion: comunicacion %>
+  <%= render 'comunicaciones/empresas', comunicacion: comunicacion %>
+  <div class="mensajes-wrapper">
+    <%= content_tag :div, render(comunicacion.mensajes.last(3)), class: :mensajes %>
+    <footer class="leer-mas">
+      <%= link_to "Leer más", comunicacion, class: 'btn btn-primary pull-right' %>
+    </footer>
+  </div>
+<% end %>

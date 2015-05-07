@@ -1,0 +1,8 @@
+<div class="page-header">
+  <h3>Solicitudes de empresas</h3>
+</div>
+
+<table class="table table-striped">
+  <%= thead :empresa, :email, :usuario, :acciones %>
+  <%= content_tag :tbody, render(partial: 'empresas/solicitud', collection: @empresas, as: :empresa) %>
+</table>

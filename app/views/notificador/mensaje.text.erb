@@ -1,0 +1,3 @@
+"<%= @usuario.nombre %>" de "<%= @usuario.empresa.nombre %>" ha escrito un mensaje en la comunicación "<%= @comunicacion.asunto %>".
+
+Leela en <%= comunicacion_url(@comunicacion, host: @comunicacion.empresa.organizacion.url) %>

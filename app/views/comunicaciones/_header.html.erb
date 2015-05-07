@@ -1,0 +1,4 @@
+<header class="alert alert-warning">
+  <span class="pull-left lead text-muted"><%= link_to_unless_current "##{comunicacion.id} #{comunicacion.asunto}", comunicacion %></span>
+  <strong class="lead pull-right"><%= fecha comunicacion.created_at, format: :fecha %></strong>
+</header>

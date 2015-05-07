@@ -1,0 +1,10 @@
+---
+name: ferrobaires.png
+model_class: Empresa
+model_attachment: imagen
+analyser_cache:
+  image_properties:
+    format: png
+    width: 150
+    height: 150
+  format: png

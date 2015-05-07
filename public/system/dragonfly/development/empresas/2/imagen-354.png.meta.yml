@@ -1,0 +1,10 @@
+---
+name: snappler.png
+model_class: Empresa
+model_attachment: imagen
+analyser_cache:
+  image_properties:
+    format: png
+    width: 260
+    height: 260
+  format: png

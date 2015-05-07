@@ -1,0 +1,10 @@
+<div class="page-header">
+  <h3>Iniciar sesión</h3>
+</div>
+
+<%= simple_form_for @usuario, url: sesiones_path, method: :post do |f| %>
+  <%= f.input :email, autofocus: true %>
+  <%= f.input :password %>
+
+  <%= submit_button f, "Iniciar sesión", { class: 'btn btn-primary no-border' } %>
+<% end %>

@@ -1,0 +1,9 @@
+<div class="page-header">
+  <h3><%= @empresa.nombre %></h3>
+</div>
+
+<%= link_to "Nueva comunicación", [:new, :comunicacion], class: 'btn btn-lg btn-primary' %>
+
+<hr />
+
+<%= render partial: 'comunicaciones/resumen', collection: @comunicaciones, as: :comunicacion %>

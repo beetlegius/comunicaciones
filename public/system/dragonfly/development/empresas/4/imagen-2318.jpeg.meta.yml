@@ -1,0 +1,10 @@
+---
+name: Justin.jpg
+model_class: Empresa
+model_attachment: imagen
+analyser_cache:
+  image_properties:
+    format: jpeg
+    width: 450
+    height: 234
+  format: jpeg
