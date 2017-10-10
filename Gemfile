@@ -37,16 +37,8 @@ group :production do
   gem 'exception_notification'
 end
 
-gem 'capistrano'
-gem 'capistrano-rbenv'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
-
 gem 'dragonfly'
 gem 'unf'
-
-# gem 'rabl'
-# gem 'oj'
 
 gem 'bourbon'
 
